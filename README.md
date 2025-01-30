@@ -10,7 +10,7 @@ This service exposes the following methods:
 - `get(key)` - Retrieve a specific upload URL and metadata
 - `delete(key)` - Delete an existing transcription
 
-Use it in an existing Worker like so:
+After it is deployed, you can use it in an existing Worker like so:
 
 ```toml
 [[services]]
@@ -58,6 +58,14 @@ npx wrangler kv namespace create uploaded-metadata
 
 ```bash
 npm run dev
+```
+
+If you want Type completion in your worker:
+
+```typescript
+interface Env {
+	UPLOADER: Fetcher<import("../autotranscriber/src/").Uploader>;
+}
 ```
 
 ## Deploy
