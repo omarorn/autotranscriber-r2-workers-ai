@@ -3,7 +3,7 @@
   "name": "autotranscriber",
   "main": "src/index.ts",
   "compatibility_date": "2025-01-23",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": ["nodejs_compat_v2"],
 	"observability": {
     "enabled": true
   },

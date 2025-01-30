@@ -1,6 +1,6 @@
 import { WorkerEntrypoint } from 'cloudflare:workers';
 // @ts-ignore
-import Buffer from 'node:buffer';
+import { Buffer } from 'node:buffer';
 
 export type Upload = {
 	url: string;
