@@ -2,7 +2,7 @@
 
 You upload an audio file and get a cached transcription.
 
-This is a microservice approach that shares uploaded audio and cached transcriptions. It uses a [WorkerEntryPoint for RPC](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/rpc/) to connected service bindings.
+This is a microservice approach built on [the Cloudflare Stack](https://developers.cloudflare.com) that shares uploaded audio and cached transcriptions. It uses a [WorkerEntryPoint for RPC](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/rpc/) to connected service bindings.
 
 ## Setup
 
@@ -36,4 +36,15 @@ npx wrangler r2 bucket notification create uploads --event-type object-create --
 ```bash
 # Create a KV store where you can cache your results
 npx wrangler kv namespace create uploaded-metadata
+```
+## Develop
+
+```bash
+npm run dev
+```
+
+## Deploy
+
+```bash
+npm run deploy
 ```
