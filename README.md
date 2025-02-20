@@ -1,5 +1,7 @@
 # Autotranscribe
 
+[<img src="https://img.youtube.com/vi/iTn4I8N2FQc/0.jpg">](https://youtu.be/iTn4I8N2FQc "Build a Transcription Microservice with a Named WorkerEntryPoint")
+
 You upload an audio file and get a cached transcription.
 
 This is a microservice approach built on [the Cloudflare Stack](https://developers.cloudflare.com) that shares uploaded audio and cached transcriptions. It uses a [WorkerEntryPoint for RPC](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/rpc/) to connected service bindings.
