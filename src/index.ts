@@ -8,7 +8,7 @@ export type Upload = {
 };
 
 export class Uploader extends WorkerEntrypoint<Env> {
-	async listUploads() {
+	async listUploads(): Promise<string[]> {
 		const keyList = await this.env.METADATA.list();
 		return keyList.keys.map((k) => k.name).sort();
 	}
@@ -26,7 +26,7 @@ export class Uploader extends WorkerEntrypoint<Env> {
 		};
 	}
 
-	async deleteUpload(key: string) {
+	async deleteUpload(key: string): Promise<void> {
 		await this.env.UPLOADS.delete(key);
 		await this.env.METADATA.delete(key);
 		console.log(`Deleted ${key}`);
