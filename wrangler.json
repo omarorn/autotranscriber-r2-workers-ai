@@ -8,7 +8,7 @@
     "enabled": true
   },
 	"vars": {
-		"R2_URL": "https://pub-ba6c329d42154fabbdf05a5c5f062731.r2.dev"
+		"R2_URL": "https://72ed26d13abd695cc3ae785adb386c27.r2.cloudflarestorage.com/platform-agent-portal"
 	},
 	"r2_buckets": [
     {
@@ -18,14 +18,14 @@
   ],
 	"kv_namespaces": [
     {
-      "binding": "METADATA",
-      "id": "5925bf66d1aa4799b5455ca122606792"
+      "binding": "uploaded_metadata",
+      "id": "a147368de5524d1c8b0f534dbf08187f"
     }
   ],
 	"queues": {
     "consumers": [
       {
-        "queue": "uploaded"
+        "queue": "agent-jobs"
       }
     ]
   },
